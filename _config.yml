@@ -1,0 +1,50 @@
+title: Jonathan Hoium (hoium04)
+description: Tech Ops Engineer
+author:
+  name: Jonathan Hoium
+  nickname: hoium04
+hostname: hoium.me # used to determine if google analytics should be triggered
+url: https://hoium.me # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+permalink: /:title/
+
+# stuff for jekyll-seo-tag
+social:
+  name: Jonathan Hoium
+  links:
+    - https://twitter.com/hoium2004
+    - https://github.com/hoium
+    - https://www.linkedin.com/in/hoium04
+    - https://www.facebook.com/hoium04
+
+links:
+  - name: facebook
+    url: https://www.facebook.com/hoium04
+    class: fa-facebook
+  - name: instagram
+    url: https://www.instagram.com/hoium04/
+    class: fa-instagram
+  - name: github
+    url: https://github.com/hoium
+    class: fa-github
+  - name: linkedin
+    url: https://www.linkedin.com/in/hoium04
+    class: fa-linkedin
+
+# additional stuff
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - README.md
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
