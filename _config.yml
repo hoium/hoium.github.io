@@ -29,7 +29,7 @@ links:
     class: fa-linkedin-square
   - name: github
     url: https://github.com/hoium
-    class: fa-github-square
+    class: fa-github-alt
 
 # additional stuff
 exclude:
