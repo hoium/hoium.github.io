@@ -24,12 +24,12 @@ links:
   - name: instagram
     url: https://www.instagram.com/hoium04/
     class: fa-instagram
-  - name: github
-    url: https://github.com/hoium
-    class: fa-github-square
   - name: linkedin
     url: https://www.linkedin.com/in/hoium04
     class: fa-linkedin-square
+  - name: github
+    url: https://github.com/hoium
+    class: fa-github-square
 
 # additional stuff
 exclude:
