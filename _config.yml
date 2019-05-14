@@ -15,7 +15,8 @@ social:
     - https://www.facebook.com/hoium04
     - https://www.instagram.com/hoium04
     - https://www.linkedin.com/in/hoium04
-    - https://github.com/hoium    
+    - https://github.com/hoium
+    - https://gitlab.com/hoium
 
 links:
   - name: facebook
@@ -30,6 +31,9 @@ links:
   - name: github
     url: https://github.com/hoium
     class: fa-github-alt
+  - name: gitlab
+    url: https://gitlab.com/hoium
+    class: fa-gitlab
 
 # additional stuff
 exclude:
