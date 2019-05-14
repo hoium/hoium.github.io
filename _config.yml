@@ -12,10 +12,10 @@ permalink: /:title/
 social:
   name: Jonathan Hoium
   links:
-    - https://twitter.com/hoium2004
-    - https://github.com/hoium
-    - https://www.linkedin.com/in/hoium04
     - https://www.facebook.com/hoium04
+    - https://www.instagram.com/hoium04
+    - https://www.linkedin.com/in/hoium04
+    - https://github.com/hoium    
 
 links:
   - name: facebook
