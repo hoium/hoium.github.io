@@ -31,9 +31,6 @@ links:
   - name: github
     url: https://github.com/hoium
     class: fa-github-alt
-  - name: gitlab
-    url: https://gitlab.com/hoium
-    class: fa-gitlab
 
 # additional stuff
 exclude:
