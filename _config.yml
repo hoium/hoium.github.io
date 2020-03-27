@@ -17,6 +17,7 @@ social:
     - https://www.linkedin.com/in/hoium04
     - https://github.com/hoium
     - https://gitlab.com/hoium
+    - https://revkit.com/hoium
 
 links:
   - name: facebook
@@ -31,6 +32,9 @@ links:
   - name: github
     url: https://github.com/hoium
     class: fa-github-alt
+  - name: jeep
+    url: https://revkit.com/hoium
+    class: fa-road
 
 # additional stuff
 exclude:
