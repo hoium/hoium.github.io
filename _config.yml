@@ -33,7 +33,7 @@ links:
     url: https://github.com/hoium
     class: fa-github-alt
   - name: aws-cert
-    url: https://www.dropbox.com/s/di4c92808pujena/AWS%20CSA%20Associate%20Certificate.pdf?dl=0
+    url: https://s3.amazonaws.com/hoium.me/AWS+CSA+Associate+Certificate.pdf
     class: fa-amazon
   - name: jeep
     url: https://revkit.com/hoium
