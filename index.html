@@ -11,7 +11,7 @@ layout: default
           </span>
           <div class="site-links">
             {% for item in site.links %}
-            <a href="{{ item.url }}" onclick="_gaq.push(['_trackEvent', '{% if item.type %}{{ item.type}}{% else %}linkTo{% endif %}', '{% if item.id%}{{ item.id }}{% else %}{{ item.name }}{% endif %}', this.href]);"><i class="fa {{ item.class }}"></i><span class="link-text">{{ item.name }}</span></a>{% endfor %}
+            <a href="{{ item.url }}" target="_blank" onclick="_gaq.push(['_trackEvent', '{% if item.type %}{{ item.type}}{% else %}linkTo{% endif %}', '{% if item.id%}{{ item.id }}{% else %}{{ item.name }}{% endif %}', this.href]);"><i class="fa {{ item.class }}"></i><span class="link-text">{{ item.name }}</span></a>{% endfor %}
           </div>
         </span>
       </div>
