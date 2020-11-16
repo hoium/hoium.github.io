@@ -1,58 +1,29 @@
-title: Jonathan Hoium (hoium04)
+title: Jonathan Hoium
+name: Jonathan Hoium
 description: Tech Ops Engineer @Zillow Group
-author:
-  name: Jonathan Hoium
-  nickname: hoium04
-hostname: hoium.me # used to determine if google analytics should be triggered
-url: https://hoium.me # the base hostname & protocol for your site
-baseurl: "" # the subpath of your site, e.g. /blog/
-permalink: /:title/
+url: /
 
-# stuff for jekyll-seo-tag
-social:
-  name: Jonathan Hoium
-  links:
-    - https://www.facebook.com/hoium04
-    - https://www.instagram.com/hoium04
-    - https://www.linkedin.com/in/hoium04
-    - https://github.com/hoium
-    - https://gitlab.com/hoium
-    - https://revkit.com/hoium
+email: hoium04@gmail.com
+github_username:  hoium
+#gitlab_username:
+facebook_username: hoium04
+linkedin_username: hoium04
+instagram_username: hoium04
 
-links:
-  - name: facebook
-    url: https://www.facebook.com/hoium04
-    class: fa-facebook-square
-  - name: instagram
-    url: https://www.instagram.com/hoium04/
-    class: fa-instagram
-  - name: linkedin
-    url: https://www.linkedin.com/in/hoium04
-    class: fa-linkedin-square
-  - name: github
-    url: https://github.com/hoium
-    class: fa-github-alt
-  - name: aws-cert
-    url: https://s3.amazonaws.com/hoium.me/AWS+CSA+Associate+Certificate.pdf
-    class: fa-amazon
-  - name: jeep
-    url: https://revkit.com/hoium
-    class: fa-road
+# Hoium Misc
+s3_cert: true
+jeep: true
 
-# additional stuff
+avatar: True
+avatar_img_path: https://avatars1.githubusercontent.com/u/9096615
+
+front_img: True
+front_img_path: imgs/background.jpg
+
+favicon_img: True
+favicon_img_path: imgs/favicon.ico
+
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - Rakefile
+  - LICENSE
   - README.md
-
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
+  - v1/*

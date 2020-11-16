@@ -1,18 +1,76 @@
 ---
-layout: default
+permalink: /
 ---
-    <header class="site-header">
-      <div class="site-header-container">
-        <img class="site-avatar" src="{{ "/img/jhoium-1.0.jpg" | prepend: site.baseurl }}">
-        <span class="content">
-          <span class="site-title">
-            <span class="site-name">{{ site.author.name }}</span>
-            <span class="site-description">{{ site.description }}</span>
-          </span>
-          <div class="site-links">
-            {% for item in site.links %}
-            <a href="{{ item.url }}" target="_blank" onclick="_gaq.push(['_trackEvent', '{% if item.type %}{{ item.type}}{% else %}linkTo{% endif %}', '{% if item.id%}{{ item.id }}{% else %}{{ item.name }}{% endif %}', this.href]);"><i class="fa {{ item.class }}"></i><span class="link-text">{{ item.name }}</span></a>{% endfor %}
-          </div>
-        </span>
-      </div>
-    </header>
+<!DOCTYPE html>
+<html>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123136161-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-123136161-1');
+        </script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ site.description }}">
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        {% if site.favicon_img %}
+        <link rel="shortcut icon" href="{{ site.favicon_img_path }}" />
+        {% endif %}
+        <link rel="stylesheet" href="{{ "css/front.css" | prepend: site.baseurl }}">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin' rel='stylesheet' type='text/css'>
+        <script src="https://kit.fontawesome.com/4e272c7a99.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="content">
+            {% if site.front_img %}
+            <img src="{{ site.front_img_path }}" id="fullscreen">
+            {% endif %}
+
+            {% if site.avatar %}
+                <img src="{{ site.avatar_img_path }}" id="avatar">
+            {% endif %}
+
+            <h1>{{ site.name }}</h1>
+            <h3>{{ site.description }}</h3>
+
+                <ul>
+                    {% if site.email %}
+                    <li><a class="fa fa-2x fa-envelope" href="mailto:{{ site.email }}"><span class="description">Email</span></a></li>
+                    {% endif %}
+                    
+                    {% if site.github_username %}
+                    <li><a class="fa fa-2x fa-github" href="https://github.com/{{ site.github_username }}" target="_blank"><span class="description">GitHub</span></a></li>
+                    {% endif %}
+
+                    {% if site.gitlab_username %}
+                    <li><a class="fa fa-2x fa-gitlab" href="https://gitlab.com/{{ site.gitlab_username }}" target="_blank"><span class="description">GitLab</span></a></li>
+                    {% endif %}
+
+                    {% if site.s3_cert %}
+                    <li><a class="fab fa-2x fa-aws" href="https://s3.amazonaws.com/hoium.me/AWS+CSA+Associate+Certificate.pdf" target="_blank"><span class="description">AWS-Cert</span></a></li>
+                    {% endif %}
+
+                    {% if site.facebook_username %}
+                    <li><a class="fa fa-2x fa-facebook" href="https://facebook.com/{{ site.facebook_username }}" target="_blank"><span class="description">Facebook</span></a></li>
+                    {% endif %}
+
+                    {% if site.linkedin_username %}
+                    <li><a class="fa fa-2x fa-linkedin" href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><span class="description">LinkedIn</span></a></li>
+                    {% endif %}
+
+                    {% if site.instagram_username %}
+                    <li><a class="fa fa-2x fa-instagram" href="https://instagram.com/{{ site.instagram_username }}" target="_blank"><span class="description">Instagram</span></a></li>
+                    {% endif %}
+
+                    {% if site.jeep %}
+                    <li><a class="fas fa-2x fa-truck-monster" href="https://revkit.com/hoium" target="_blank"><span class="description">Jeep</span></a></li>
+                    {% endif %}
+                </ul>
+        </div>
+
+    </body>
+</html>
