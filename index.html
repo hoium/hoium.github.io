@@ -38,20 +38,12 @@ permalink: /
             <h3>{{ site.description }}</h3>
 
                 <ul>
-                    {% if site.email %}
-                    <li><a class="fa fa-2x fa-envelope" href="mailto:{{ site.email }}"><span class="description">Email</span></a></li>
-                    {% endif %}
-                    
                     {% if site.github_username %}
-                    <li><a class="fa fa-2x fa-github" href="https://github.com/{{ site.github_username }}" target="_blank"><span class="description">GitHub</span></a></li>
+                    <li><a class="fab fa-2x fa-github" href="https://github.com/{{ site.github_username }}" target="_blank"><span class="description">GitHub</span></a></li>
                     {% endif %}
 
                     {% if site.gitlab_username %}
                     <li><a class="fa fa-2x fa-gitlab" href="https://gitlab.com/{{ site.gitlab_username }}" target="_blank"><span class="description">GitLab</span></a></li>
-                    {% endif %}
-
-                    {% if site.s3_cert %}
-                    <li><a class="fab fa-2x fa-aws" href="https://s3.amazonaws.com/hoium.me/AWS+CSA+Associate+Certificate.pdf" target="_blank"><span class="description">AWS Cert</span></a></li>
                     {% endif %}
 
                     {% if site.facebook_username %}
@@ -63,11 +55,19 @@ permalink: /
                     {% endif %}
 
                     {% if site.instagram_username %}
-                    <li><a class="fa fa-2x fa-instagram" href="https://instagram.com/{{ site.instagram_username }}" target="_blank"><span class="description">Instagram</span></a></li>
+                    <li><a class="fab fa-2x fa-instagram" href="https://instagram.com/{{ site.instagram_username }}" target="_blank"><span class="description">Instagram</span></a></li>
                     {% endif %}
 
+                    {% if site.s3_cert %}
+                    <li><a class="fab fa-2x fa-aws" href="https://s3.amazonaws.com/hoium.me/AWS+CSA+Associate+Certificate.pdf" target="_blank"><span class="description">AWS Cert</span></a></li>
+                    {% endif %}
+                    
                     {% if site.jeep %}
-                    <li><a class="fas fa-2x fa-truck-monster" href="https://revkit.com/hoium" target="_blank"><span class="description">Jeep</span></a></li>
+                    <li><a class="fas fa-2x fa-map-signs" href="https://revkit.com/hoium" target="_blank"><span class="description">Jeep</span></a></li>
+                    {% endif %}
+
+                    {% if site.email %}
+                    <li><a class="fa fa-2x fa-envelope" href="mailto:{{ site.email }}"><span class="description">Email</span></a></li>
                     {% endif %}
                 </ul>
         </div>
