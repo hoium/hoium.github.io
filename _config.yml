@@ -14,7 +14,7 @@ social:
   links:
     - https://www.facebook.com/hoium04
     - https://www.instagram.com/hoium04
-    - https://www.linkedin.com/in/hoium04
+    # - https://www.linkedin.com/in/hoium04
     - https://github.com/hoium
     - https://gitlab.com/hoium
     - https://revkit.com/hoium
@@ -26,9 +26,9 @@ links:
   - name: instagram
     url: https://www.instagram.com/hoium04/
     class: fa-instagram
-  - name: linkedin
-    url: https://www.linkedin.com/in/hoium04
-    class: fa-linkedin-square
+  # - name: linkedin
+  #   url: https://www.linkedin.com/in/hoium04
+  #   class: fa-linkedin-square
   - name: github
     url: https://github.com/hoium
     class: fa-github-alt
