@@ -1,0 +1,33 @@
+# Site Info
+title: Hoium
+name: Jonathan Hoium
+description: Engineer
+url: /
+
+# Google Analytics
+google_analytics: UA-123136161-1
+google_analytics_ga4: G-43TNCC86V8
+
+# Contact Info
+email:
+github_username:  hoium
+gitlab_username:  hoium 
+facebook_username: hoium04
+linkedin_username: hoium
+instagram_username: hoium04
+
+# Hoium Misc
+s3_cert: https://www.credly.com/badges/6b955d7e-6326-4eb1-9249-eb0f0280030b
+jeep: https://revkit.com/hoium
+
+# Github Corner
+git_repo: https://github.com/hoium/hoium.github.io
+
+# Avatar / Images
+avatar_img_path: https://avatars.githubusercontent.com/u/9096615
+front_img_path: imgs/background.jpeg
+favicon_img_path: imgs/favicon.ico
+
+exclude:
+  - LICENSE
+  - README.md
