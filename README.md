@@ -7,5 +7,5 @@
 ### **Build Local**
 
 ```sh
-jekyll serve
+jekyll serve --incremental
 ```
