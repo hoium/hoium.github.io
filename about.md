@@ -1,5 +1,5 @@
 ---
-title: First Post
+title: About
 ---
 
 ## `whoami` I'm [Jonathan Hoium][linkedin] 👋
