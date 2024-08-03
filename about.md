@@ -1,10 +1,10 @@
 ---
-title: About
+permalink: /About
 ---
 
-## `whoami` I'm [Jonathan Hoium][linkedin] 👋
+# `whoami` I'm [Jonathan Hoium][linkedin] 👋
 
-### I'll eventually put something useful here. In the meantime, check out [hoium.me][website]
+## I'll eventually put something useful here. In the meantime, check out [hoium.me][website]
 
 <!-- Sites -->
 
