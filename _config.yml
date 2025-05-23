@@ -2,7 +2,22 @@
 title: Hoium
 name: Jonathan Hoium
 description: Senior IT Engineer
-url: /
+url: https://hoium.github.io
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
 
 # Google Analytics
 google_analytics: UA-123136161-1
@@ -22,12 +37,19 @@ git_repo: https://github.com/hoium/hoium.github.io
 
 # Avatar / Images
 avatar_img_path: https://avatars.githubusercontent.com/u/9096615
-front_img_path: imgs/background.jpeg
-favicon_img_path: imgs/favicon.ico
+front_img_path: /imgs/background.jpeg
+favicon_img_path: /imgs/favicon.ico
 
+# Exclude files from processing
 exclude:
   - CNAME
   - LICENSE
   - Makefile
   - README.md
   - .ruby-version
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .github

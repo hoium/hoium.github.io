@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+<div class="tag-page">
+  <h1>Posts tagged with "{{ page.tag }}"</h1>
+
+  <div class="posts-list">
+    {% if site.tags[page.tag] %} {% assign posts = site.tags[page.tag] | sort:
+    'date' | reverse %} {% for post in posts %}
+    <article class="post-item">
+      <h2>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </time>
+        {% if post.author %}
+        <span class="post-author">by {{ post.author }}</span>
+        {% endif %}
+      </div>
+      {% if post.excerpt %}
+      <div class="post-excerpt">
+        {{ post.excerpt | strip_html | truncatewords: 50 }}
+      </div>
+      {% endif %}
+      <a href="{{ post.url | prepend: site.baseurl }}" class="read-more"
+        >Read more →</a
+      >
+    </article>
+    {% endfor %} {% else %}
+    <p>No posts found with this tag.</p>
+    {% endif %}
+  </div>
+
+  <div class="back-to-tags">
+    <a href="{{ '/tags/' | prepend: site.baseurl }}">← Back to all tags</a>
+  </div>
+</div>
+
+<style>
+  .tag-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .posts-list {
+    margin: 2rem 0;
+  }
+
+  .post-item {
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .post-item:last-child {
+    border-bottom: none;
+  }
+
+  .post-item h2 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .post-item h2 a {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .post-item h2 a:hover {
+    text-decoration: underline;
+  }
+
+  .post-meta {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .post-author {
+    margin-left: 1rem;
+  }
+
+  .post-excerpt {
+    margin: 1rem 0;
+    color: var(--text-secondary);
+  }
+
+  .read-more {
+    display: inline-block;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+  }
+
+  .back-to-tags {
+    margin-top: 2rem;
+  }
+
+  .back-to-tags a {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .back-to-tags a:hover {
+    text-decoration: underline;
+  }
+</style>
