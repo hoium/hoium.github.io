@@ -98,24 +98,7 @@ permalink: /
       <h3>{{ site.description }}</h3>
 
       <ul>
-        <li>
-          <a
-            href="{{ '/blog/' | prepend: site.baseurl }}"
-            class="fas fa-2x fa-blog"
-          >
-            <span class="description">Blog</span>
-          </a>
-        </li>
-        {% if site.github_username %}
-        <li>
-          <a
-            class="fab fa-2x fa-github"
-            href="https://github.com/{{ site.github_username }}"
-            target="_blank"
-            ><span class="description">GitHub</span></a
-          >
-        </li>
-        {% endif %} {% if site.facebook_username %}
+        {% if site.facebook_username %}
         <li>
           <a
             class="fa fa-2x fa-facebook"
@@ -144,14 +127,28 @@ permalink: /
         </li>
         {% endif %} {% if site.jeep %}
         <li>
-          <a
-            class="fas fa-2x fa-map-signs"
-            href="{{ site.jeep }}"
-            target="_blank"
+          <a class="fas fa-2x fa-road" href="{{ site.jeep }}" target="_blank"
             ><span class="description">Jeep</span></a
           >
         </li>
+        {% endif %} {% if site.github_username %}
+        <li>
+          <a
+            class="fab fa-2x fa-github"
+            href="https://github.com/{{ site.github_username }}"
+            target="_blank"
+            ><span class="description">GitHub</span></a
+          >
+        </li>
         {% endif %}
+        <li>
+          <a
+            href="{{ '/blog/' | prepend: site.baseurl }}"
+            class="fas fa-2x fa-blog"
+          >
+            <span class="description">Blog</span>
+          </a>
+        </li>
       </ul>
     </div>
     <a
