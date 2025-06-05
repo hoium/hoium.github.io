@@ -1,5 +1,5 @@
 serve:
-	jekyll serve --incremental
+	bundle exec jekyll serve --incremental
 
 .SILENT:
 .PHONY:

@@ -1,0 +1,103 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="tags-page">
+  <h1>Tags</h1>
+
+  {% if site.tags.size > 0 %}
+  <div class="tags-list">
+    {% assign tags_list = site.tags | sort %} {% for tag in tags_list %}
+    <a
+      href="{{ '/tags/' | append: tag[0] | prepend: site.baseurl }}"
+      class="tag-link"
+    >
+      {{ tag[0] }} ({{ tag[1] | size }})
+    </a>
+    {% endfor %}
+  </div>
+
+  <div class="tags-posts">
+    {% for tag in tags_list %}
+    <div class="tag-section">
+      <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+      <ul>
+        {% assign posts = tag[1] | sort: 'date' | reverse %} {% for post in
+        posts %}
+        <li>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>No tags found.</p>
+  {% endif %}
+</div>
+
+<style>
+  .tags-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .tags-list {
+    margin: 2rem 0;
+  }
+
+  .tag-link {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: background-color 0.2s;
+  }
+
+  .tag-link:hover {
+    background: var(--bg-tertiary);
+  }
+
+  .tag-section {
+    margin: 2rem 0;
+  }
+
+  .tag-section h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .tag-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tag-section li {
+    margin: 1rem 0;
+  }
+
+  .tag-section a {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .tag-section a:hover {
+    text-decoration: underline;
+  }
+
+  .post-date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+  }
+</style>
