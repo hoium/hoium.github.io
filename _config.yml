@@ -2,10 +2,10 @@
 title: Hoium
 name: Jonathan Hoium
 description: Senior IT Engineer
-url: /
+url: https://hoium.me
+og_description: Senior IT Engineer specializing in MDM, AI, AWS, and System Architecture. Connect with me on LinkedIn, GitHub, and more.
 
 # Google Analytics
-google_analytics: UA-123136161-1
 google_analytics_ga4: G-43TNCC86V8
 
 # Contact Info
@@ -13,6 +13,7 @@ github_username: hoium
 facebook_username: hoium04
 linkedin_username: hoium
 instagram_username: hoium04
+email_encoded: aG9pdW0wNEBnbWFpbC5jb20= # base64 encoded: hoium04@gmail.com
 
 # Hoium Misc
 jeep: https://revkit.com/hoium

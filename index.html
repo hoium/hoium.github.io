@@ -20,10 +20,31 @@ permalink: /
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+      {% if page.title %}{{ page.title }}{% else %}{{ site.name }} - {{ site.description }}{% endif %}
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{ site.description }}" />
+    <meta name="description" content="{{ site.og_description }}" />
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:title" content="{{ site.name }} - {{ site.description }}" />
+    <meta property="og:description" content="{{ site.og_description }}" />
+    <meta property="og:image" content="{{ site.avatar_img_path }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="{{ site.url }}" />
+    <meta name="twitter:title" content="{{ site.name }} - {{ site.description }}" />
+    <meta name="twitter:description" content="{{ site.og_description }}" />
+    <meta name="twitter:image" content="{{ site.avatar_img_path }}" />
+
+    <!-- LinkedIn -->
+    <meta property="og:linkedin:profile" content="https://linkedin.com/in/{{ site.linkedin_username }}" />
+
     <link
       rel="canonical"
       href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
@@ -55,6 +76,7 @@ permalink: /
             class="fa fa-2x fa-facebook"
             href="https://facebook.com/{{ site.facebook_username }}"
             target="_blank"
+            rel="noopener noreferrer"
             ><span class="description">Facebook</span></a
           >
         </li>
@@ -64,6 +86,7 @@ permalink: /
             class="fab fa-2x fa-instagram"
             href="https://instagram.com/{{ site.instagram_username }}"
             target="_blank"
+            rel="noopener noreferrer"
             ><span class="description">Instagram</span></a
           >
         </li>
@@ -73,6 +96,7 @@ permalink: /
             class="fa fa-2x fa-linkedin"
             href="https://linkedin.com/in/{{ site.linkedin_username }}"
             target="_blank"
+            rel="noopener noreferrer"
             ><span class="description">LinkedIn</span></a
           >
         </li>
@@ -82,21 +106,45 @@ permalink: /
             class="fab fa-2x fa-github"
             href="https://github.com/{{ site.github_username }}"
             target="_blank"
+            rel="noopener noreferrer"
             ><span class="description">GitHub</span></a
+          >
+        </li>
+        {% endif %} {% if site.email_encoded %}
+        <li>
+          <a
+            class="fas fa-2x fa-envelope"
+            href="#"
+            id="email-link"
+            rel="noopener noreferrer"
+            ><span class="description">Email</span></a
           >
         </li>
         {% endif %} {% if site.jeep %}
         <li>
-          <a class="fas fa-2x fa-road" href="{{ site.jeep }}" target="_blank"
+          <a class="fas fa-2x fa-road" href="{{ site.jeep }}" target="_blank" rel="noopener noreferrer"
             ><span class="description">Jeep</span></a
           >
         </li>
         {% endif %}
       </ul>
+      <script>
+        // Decode and set email link on page load
+        {% if site.email_encoded %}
+        (function() {
+          var emailLink = document.getElementById('email-link');
+          if (emailLink) {
+            var email = atob('{{ site.email_encoded }}');
+            emailLink.href = 'mailto:' + email;
+          }
+        })();
+        {% endif %}
+      </script>
     </div>
     <a
       href="{{ site.git_repo }}"
       target="_blank"
+      rel="noopener noreferrer"
       class="github-corner"
       aria-label="View source on GitHub"
       ><svg
@@ -144,11 +192,8 @@ permalink: /
         }
       }
       @media (max-width: 500px) {
-        .github-corner:hover .octo-arm {
-          animation: none;
-        }
-        .github-corner .octo-arm {
-          animation: octocat-wave 560ms ease-in-out;
+        .github-corner {
+          display: none;
         }
       }
     </style>
