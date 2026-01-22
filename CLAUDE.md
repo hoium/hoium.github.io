@@ -8,51 +8,43 @@ This is a personal portfolio website (hoium.me) built with Jekyll and based on t
 
 ## Development Commands
 
-### Local Development Server
-
 ```sh
-jekyll serve --incremental
+make serve           # Runs jekyll serve --incremental
+jekyll serve --incremental  # Direct command (faster rebuilds)
 ```
-
-or via Makefile:
-
-```sh
-make serve
-```
-
-The `--incremental` flag enables faster rebuilds during development.
 
 ## Architecture
 
 ### Site Structure
 
-- **[index.html](index.html)**: The main and only page - contains the full HTML template with Jekyll Liquid templating
-- **[_config.yml](_config.yml)**: Jekyll configuration file containing all site variables (name, description, social links, Google Analytics IDs, image paths)
-- **[css/front.css](css/front.css)**: Styling for the single-page layout with responsive design (mobile breakpoint at 450px)
-- **_layouts/**: Contains empty default layout (theme uses inline HTML instead)
-- **imgs/**: Static image assets (background, favicon)
+- **[index.html](index.html)**: Main page with full HTML template using Jekyll Liquid templating
+- **[_config.yml](_config.yml)**: All site content and configuration variables
+- **[css/front.css](css/front.css)**: Styling with responsive design (mobile breakpoint at 450px, GitHub corner hides at 500px)
+- **[404.html](404.html)**: Custom 404 error page
+- **imgs/**: Static assets (background.jpeg, favicon.ico)
 
-### Configuration Philosophy
+### Configuration Variables
 
-All content is managed through [_config.yml](_config.yml) variables:
+All content is managed through [_config.yml](_config.yml):
 
-- Personal info: `title`, `name`, `description`
-- Social links: `github_username`, `facebook_username`, `linkedin_username`, `instagram_username`
-- Custom links: `jeep` (RevKit link)
-- Analytics: `google_analytics`, `google_analytics_ga4`
-- Images: `avatar_img_path`, `front_img_path`, `favicon_img_path`
+- **Site info**: `title`, `name`, `description`, `url`, `og_description`
+- **Social links**: `github_username`, `facebook_username`, `linkedin_username`, `instagram_username`
+- **Contact**: `email_encoded` (base64-encoded for spam protection)
+- **Custom links**: `jeep`, `git_repo`
+- **Analytics**: `google_analytics_ga4`
+- **Images**: `avatar_img_path`, `front_img_path`, `favicon_img_path`
+
+### Email Obfuscation
+
+Email is stored as base64 in `email_encoded` and decoded via JavaScript at runtime to prevent scraping. To update, encode the new email: `echo -n "email@example.com" | base64`
 
 ### Content Updates
 
-To modify site content, edit [_config.yml](_config.yml) rather than [index.html](index.html). The HTML template uses Jekyll Liquid syntax to pull values from config: `{{ site.name }}`, `{{ site.description }}`, etc.
-
-### Styling Approach
-
-The site uses a fullscreen background image overlay with centered content. Social links are rendered as circular icon buttons (FontAwesome) that transform to horizontal cards on mobile devices.
+Edit [_config.yml](_config.yml) rather than [index.html](index.html). The HTML template uses Jekyll Liquid syntax: `{{ site.name }}`, `{{ site.description }}`, etc.
 
 ## Ruby Version
 
-Ruby version is pinned in [.ruby-version](.ruby-version) for environment consistency.
+Ruby 3.4.8 (pinned in [.ruby-version](.ruby-version)).
 
 ## Commit & Pull Request Guidelines
 
