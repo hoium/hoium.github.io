@@ -1,0 +1,34 @@
+# Site Info
+title: Hoium
+name: Jonathan Hoium
+description: Principal IT Specialist
+url: https://hoium.me
+og_description: Principal IT Specialist specializing in MDM, AI, AWS, and System Architecture. Connect with me on LinkedIn, GitHub, and more.
+
+# Google Analytics
+google_analytics_ga4: G-43TNCC86V8
+
+# Contact Info
+github_username: hoium
+facebook_username: hoium04
+linkedin_username: hoium
+instagram_username: hoium04
+email_encoded: aG9pdW0wNEBnbWFpbC5jb20=
+
+# Hoium Misc
+jeep: https://revkit.com/hoium
+
+# Github Corner
+git_repo: https://github.com/hoium/hoium.github.io
+
+# Avatar / Images
+avatar_img_path: https://avatars.githubusercontent.com/u/9096615
+front_img_path: imgs/background.jpeg
+favicon_img_path: imgs/favicon.ico
+
+exclude:
+  - CNAME
+  - LICENSE
+  - Makefile
+  - README.md
+  - .ruby-version

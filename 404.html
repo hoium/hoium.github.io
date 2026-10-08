@@ -1,0 +1,89 @@
+---
+permalink: /404.html
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_ga4 }}"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "{{ site.google_analytics_ga4 }}");
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>404 - Page Not Found | {{ site.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Page not found" />
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="shortcut icon" href="{{ site.favicon_img_path }}" />
+    <link rel="stylesheet" href="{{ "css/front.css" | prepend: site.baseurl }}">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://kit.fontawesome.com/4e272c7a99.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .error-code {
+        font-size: 8em;
+        font-weight: bold;
+        color: white;
+        margin: 20px 0 10px;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      }
+      .error-message {
+        font-size: 1.5em;
+        color: white;
+        margin: 10px 0 30px;
+      }
+      .home-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid white;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+      }
+      .home-button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <img src="{{ site.front_img_path }}" id="fullscreen" />
+      <img src="{{ site.avatar_img_path }}" id="avatar" />
+
+      <h1>{{ site.name }}</h1>
+
+      <div class="error-code">404</div>
+      <div class="error-message">Page Not Found</div>
+      <p style="color: white; max-width: 500px; margin: 0 auto;">
+        Sorry, the page you're looking for doesn't exist or has been moved.
+      </p>
+
+      <a href="{{ site.baseurl }}/" class="home-button">
+        <i class="fas fa-home"></i> Return Home
+      </a>
+    </div>
+  </body>
+</html>
